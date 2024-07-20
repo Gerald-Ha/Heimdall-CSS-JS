@@ -1,0 +1,99 @@
+/* General container styles */
+@media (min-width: 1229px) {
+
+#sortable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* New containers */
+#container1, #container2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 10px 0; /* Add some margin between the containers */
+}
+
+#container1 {
+    /*background-color: #f0f0f0;*/ /* Background for container 1 */
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: center; /* Center align the content in container 1 */
+}
+
+#container2 {
+    /*background-color: #d0d0d0;*/ /* Background for container 2 */
+    padding: 10px;
+	
+    box-sizing: border-box;
+    justify-content: center; /* Position of the container 2 */
+}
+
+/* Category styles */
+.category.item-container {
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: repeat(4, auto); /* Four rows by default */
+    gap: 10px;
+    grid-auto-flow: column; /* Ensure items flow from top to bottom, then left to right */
+    width: auto; /* Adjust width automatically based on content */
+    max-width: calc(100% - 20px); /* Ensure categories don't exceed container width */
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .category.item-container {
+        grid-template-rows: repeat(3, auto); /* Three rows */
+    }
+}
+
+@media (max-width: 900px) {
+    .category.item-container {
+        grid-template-rows: repeat(2, auto); /* Two rows */
+    }
+}
+
+@media (max-width: 600px) {
+    .category.item-container {
+        grid-template-rows: repeat(1, auto); /* One row */
+    }
+}
+
+#app #sortable, #app main {
+    justify-content: center; /* Position of categories */
+}
+
+.item {
+  margin: 10px;
+  border-radius: 12% / 45%;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+ 
+
+box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 3px 0, rgba(0, 0, 0, 0.2) 0px 10px 10px -3px,
+rgba(0, 0, 0, 0.04) 0px 10px 10px -3px !important;
+ 
+  background-image: none;
+  border: hidden;
+  outline: hidden;
+  height: 75px;
+  width: 235px;
+  /*margin: 1.0rem; */
+  padding: 1rem 60px 1rem 1rem;
+  transition: all 1.0s easy-in-out;
+  transition-property: transform, box-shadow, background-color;
+background-color: rgba(255, 255, 255, 0.2) !important;
+font-family: 'Raleway', sans-serif;
+font-size: 14px;
+}
+
+.item:hover {
+background-color: rgba(40, 40, 40, 0.3) !important;
+box-shadow: rgba(66, 66, 66, 0.1) 0px 30px 30px -17px !important;
+
+}
+}
