@@ -32,5 +32,5 @@ This repository contains custom CSS and JavaScript settings for Heimdall.
 
 
 
-<img src="https://github.com/user-attachments/assets/8027c1a1-2224-468d-9662-47bc813fb835" width="400" height="auto">
+
 <img src="https://github.com/user-attachments/assets/61abcf90-dd2e-4e24-b0ff-0d2b93dddbab" width="800" height="auto">
