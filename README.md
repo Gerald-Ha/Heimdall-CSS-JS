@@ -14,6 +14,30 @@ This repository contains custom CSS and JavaScript settings for Heimdall.
 1. **Bookmark Tags**: Ensure your bookmarks in Heimdall are categorized according to the created tags. These tags act as categories that will be displayed in their respective containers.
 2. **Settings**: Go to the Heimdall settings and select "Categories" under "Treat Tags as". This is necessary for the JavaScript code to function correctly.
 
+
+### Customization
+
+To specify which tags should be included in Container 1, modify the following JavaScript code snippet:
+
+```javascript
+categories.forEach((category) => {
+    const categoryName = category.getAttribute('data-name');
+    console.log(`Processing category: ${categoryName}`);
+    if (categoryName === 'Social Media' || categoryName === 'Dev' || categoryName === 'Coding') {
+        container1.appendChild(category);
+        console.log(`Added ${categoryName} to container1`);
+    } else {
+        container2.appendChild(category);
+        console.log(`Added ${categoryName} to container2`);
+    }
+});
+``` 
+
+Replace the tags in the following line with the desired tags for Container 1:
+
+``` if (categoryName === 'Social Media' || categoryName === 'Dev' || categoryName === 'Coding')``` 
+
+
 ### Installation
 
 1. Copy the CSS and JS files to the appropriate directory of your Heimdall setup.
@@ -26,11 +50,7 @@ This repository contains custom CSS and JavaScript settings for Heimdall.
 
 
 
-
-
-
-
-
+This should include the necessary instructions for customizing the tags in Container 1.
 
 
 <img src="https://github.com/user-attachments/assets/61abcf90-dd2e-4e24-b0ff-0d2b93dddbab" width="800" height="auto">
